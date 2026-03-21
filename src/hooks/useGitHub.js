@@ -34,7 +34,7 @@ const PROJECT_META = {
     year: '2025',
     featured: true,
   },
-  CV_kim: {
+  Portefolio: {
     title: 'Portefolio - Kim',
     description: "Portfolio personnel développé en React avec Vite et Framer Motion. Animations fluides, curseur custom, routing SPA et données chargées depuis l'API GitHub. Déployé en production sur Vercel.",
     tags: ['React', 'Vite', 'Framer Motion', 'Vercel'],
@@ -52,7 +52,7 @@ const PROJECT_META = {
   },
 }
 
-const ORDER = ['barbienb', 'Onstage', 'Enchere', 'Event', 'CV_Kim','HackatonSupDeVinci']
+const ORDER = ['barbienb', 'Onstage', 'Enchere', 'Event', 'Portefolio','HackatonSupDeVinci']
 
 export function useGitHubRepos(username = 'kimiis') {
   const [repos, setRepos] = useState([])
