@@ -35,7 +35,7 @@ const PROJECT_META = {
     featured: true,
   },
   CV_kim: {
-    title: 'CV Kim',
+    title: 'Portefolio - Kim',
     description: "Portfolio personnel développé en React avec Vite et Framer Motion. Animations fluides, curseur custom, routing SPA et données chargées depuis l'API GitHub. Déployé en production sur Vercel.",
     tags: ['React', 'Vite', 'Framer Motion', 'Vercel'],
     color: '#b8a0e8',
