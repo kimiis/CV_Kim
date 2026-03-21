@@ -34,6 +34,14 @@ const PROJECT_META = {
     year: '2025',
     featured: true,
   },
+  CV_kim: {
+    title: 'CV Kim',
+    description: "Portfolio personnel développé en React avec Vite et Framer Motion. Animations fluides, curseur custom, routing SPA et données chargées depuis l'API GitHub. Déployé en production sur Vercel.",
+    tags: ['React', 'Vite', 'Framer Motion', 'Vercel'],
+    color: '#b8a0e8',
+    year: '2026',
+    featured: true,
+  },
   HackatonSupDeVinci: {
     title: 'ClimatFrance',
     description: "Dashboard réalisé en 48h lors d'un hackaton national. Visualisation des données climatiques françaises sur Streamlit pour sensibiliser les citoyens au réchauffement climatique.",
@@ -44,7 +52,7 @@ const PROJECT_META = {
   },
 }
 
-const ORDER = ['barbienb', 'Onstage', 'Enchere', 'Event', 'HackatonSupDeVinci']
+const ORDER = ['barbienb', 'Onstage', 'Enchere', 'Event', 'CV_Kim','HackatonSupDeVinci']
 
 export function useGitHubRepos(username = 'kimiis') {
   const [repos, setRepos] = useState([])
