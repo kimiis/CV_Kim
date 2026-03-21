@@ -63,6 +63,7 @@ export default function ProjectDetail() {
     >
       {/* Hero */}
       <section
+        className="project-detail-hero"
         style={{
           minHeight: '80vh',
           display: 'flex',
@@ -186,6 +187,7 @@ export default function ProjectDetail() {
 
       {/* Content */}
       <section
+        className="project-detail-content"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -197,6 +199,7 @@ export default function ProjectDetail() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
+          className="project-detail-left"
           style={{
             padding: '80px 48px',
             borderRight: '1px solid var(--line)',
@@ -232,6 +235,7 @@ export default function ProjectDetail() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
+          className="project-detail-right"
           style={{ padding: '80px 48px' }}
         >
           <p
@@ -304,6 +308,7 @@ export default function ProjectDetail() {
           <Link
             to={`/project/${prev.name}`}
             data-cursor="pointer"
+            className="project-nav-link"
             style={{
               padding: '40px 48px',
               borderRight: next ? '1px solid var(--line)' : 'none',
@@ -328,6 +333,7 @@ export default function ProjectDetail() {
           <Link
             to={`/project/${next.name}`}
             data-cursor="pointer"
+            className="project-nav-link"
             style={{
               padding: '40px 48px',
               display: 'flex',
