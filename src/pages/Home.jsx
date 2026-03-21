@@ -42,6 +42,7 @@ function Hero() {
 
   return (
     <section
+      className="hero-section"
       style={{
         minHeight: '100vh',
         display: 'flex',
@@ -231,6 +232,7 @@ function ProjectRow({ project, index }) {
             padding: '28px 0',
             gap: 0,
             position: 'relative',
+            flexWrap: 'wrap',
           }}
         >
           {/* Number */}
@@ -265,6 +267,7 @@ function ProjectRow({ project, index }) {
 
           {/* Meta */}
           <div
+            className="project-meta"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -326,6 +329,7 @@ function Projects({ repos, loading }) {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6 }}
+        className="projects-header"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -388,6 +392,7 @@ function About() {
   return (
     <section
       id="about"
+      className="about-section"
       style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
@@ -399,6 +404,7 @@ function About() {
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="about-left"
         style={{
           padding: '80px 48px',
           borderRight: '1px solid var(--line)',
@@ -429,6 +435,7 @@ function About() {
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        className="about-right"
         style={{ padding: '80px 48px' }}
       >
         <div>
@@ -438,6 +445,7 @@ function About() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 + i * 0.07 }}
+              className="skill-row"
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -448,17 +456,19 @@ function About() {
               }}
             >
               <span
+                className="skill-label"
                 style={{
                   fontSize: 11,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   color: 'var(--fg-dim)',
                   width: 110,
+                  flexShrink: 0,
                 }}
               >
                 {label}
               </span>
-              <span style={{ color: 'var(--fg-mid)', fontSize: 12, textAlign: 'right' }}>
+              <span className="skill-value" style={{ color: 'var(--fg-mid)', fontSize: 12, textAlign: 'right' }}>
                 {value}
               </span>
             </motion.div>
@@ -478,6 +488,7 @@ function Contact() {
   return (
     <section
       id="contact"
+      className="contact-section"
       style={{
         padding: '100px 48px',
         display: 'flex',
@@ -548,6 +559,7 @@ function Contact() {
 function Footer() {
   return (
     <footer
+      className="footer-section"
       style={{
         display: 'flex',
         justifyContent: 'space-between',

@@ -30,6 +30,9 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -41,6 +44,7 @@ body {
   letter-spacing: 0.02em;
   cursor: none;
   overflow-x: hidden;
+  width: 100%;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
@@ -64,4 +68,76 @@ a {
 /* ── Page transition wrapper ── */
 .page-wrapper {
   min-height: 100vh;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  /* Nav */
+  .nav-bar {
+    padding: 20px 24px !important;
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: auto !important;
+    justify-content: flex-start !important;
+    padding: 100px 24px 48px !important;
+  }
+
+  /* Projects */
+  .projects-header {
+    padding: 20px 24px !important;
+  }
+  .project-row-link {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .project-meta {
+    display: none !important;
+  }
+
+  /* About */
+  .about-section {
+    grid-template-columns: 1fr !important;
+  }
+  .about-left {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line) !important;
+    padding: 48px 24px !important;
+  }
+  .about-right {
+    padding: 48px 24px !important;
+  }
+  .skill-row {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .skill-label {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+  .skill-value {
+    text-align: left !important;
+    word-break: break-word;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 60px 24px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Footer */
+  .footer-section {
+    padding: 20px 24px !important;
+    flex-direction: column !important;
+    gap: 8px;
+  }
 }
