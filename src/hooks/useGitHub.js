@@ -26,7 +26,7 @@ const PROJECT_META = {
     year: '2023',
     featured: true,
   },
-  Event: {
+  CleanSkin: {
     title: 'CleanSkin',
     description: "Application d'accompagnement skincare intégrant l'IA pour l'analyse de peau. Frontend React, backend Python, base de données Postgres — avec automatisation et pipeline d'analyse dermatologique.",
     tags: ['React', 'Python', 'PostgreSQL', 'IA'],
@@ -34,8 +34,8 @@ const PROJECT_META = {
     year: '2025',
     featured: true,
   },
-  Portefolio: {
-    title: 'Portefolio - Kim',
+  CV_Kim: {
+    title: 'Portefolio',
     description: "Portfolio personnel développé en React avec Vite et Framer Motion. Animations fluides, curseur custom, routing SPA et données chargées depuis l'API GitHub. Déployé en production sur Vercel.",
     tags: ['React', 'Vite', 'Framer Motion', 'Vercel'],
     color: '#b8a0e8',
@@ -52,7 +52,7 @@ const PROJECT_META = {
   },
 }
 
-const ORDER = ['barbienb', 'Onstage', 'Enchere', 'Event', 'Portefolio','HackatonSupDeVinci']
+const ORDER = ['barbienb', 'Onstage', 'Enchere', 'CleanSkin', 'CV_Kim','HackatonSupDeVinci']
 
 export function useGitHubRepos(username = 'kimiis') {
   const [repos, setRepos] = useState([])
