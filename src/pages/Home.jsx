@@ -38,7 +38,7 @@ function Hero() {
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [0, 600], [0, 160])
 
-  const words = ['Dev Full-Stack', 'Data & IA', 'Alternance']
+  const words = ['Développeuse Data / IA',' Alternance']
 
   return (
     <section
@@ -59,37 +59,23 @@ function Hero() {
         style={{
           y,
           position: 'absolute',
-          top: '40%',
-          left: -10,
+          top: '15%',
+          left: 100,
           fontFamily: 'var(--serif)',
-          fontSize: 'clamp(120px, 20vw, 260px)',
+          fontSize: 'clamp(100px, 8vw, 260px)',
           fontWeight: 300,
           color: 'var(--fg)',
           opacity: 0.025,
           userSelect: 'none',
           pointerEvents: 'none',
-          whiteSpace: 'nowrap',
+          whiteSpace: 'normal',
           letterSpacing: '-0.04em',
         }}
       >
-        kimiis
+          Curious by nature
       </motion.div>
 
-      {/* Tag */}
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        style={{
-          fontSize: 11,
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: 'var(--fg-dim)',
-          marginBottom: 24,
-        }}
-      >
-        Développeuse Full Stack Data IA — Nantes
-      </motion.p>
+
 
       {/* Title */}
       <h1
@@ -118,7 +104,7 @@ function Hero() {
               style={{
                 display: 'block',
                 fontStyle: 'italic',
-                color: i === 2 ? 'var(--accent)' : 'var(--fg)',
+                color: i === 1 ? 'var(--accent)' : 'var(--fg)',
               }}
             >
               {word}
@@ -142,36 +128,19 @@ function Hero() {
       >
         <p
           style={{
-            maxWidth: 360,
+            maxWidth: 600,
             lineHeight: 1.85,
             color: 'var(--fg-mid)',
+              textAlign: 'justify',
           }}
         >
-          Je recherche une alternance pour mon Mastère Full Stack Data IA (3 sem. entreprise / 1 sem. école). Dev full-stack et data, prête à mettre mes compétences au service de la transformation digitale.
+            Musculation le matin, pâtisserie le soir, et une chanson dans un tiroir je suis quelqu'un qui crée, tout le temps,
+            sous toutes les formes. Cette énergie, je la mets aussi dans le code : en Mastère Full Stack Data IA en alternance,
+            je construis une app skincare qui mêle IA et transparence des ingrédients, parce que ma passion pour la beauté m'a
+            appris que les meilleurs produits naissent d'une vraie compréhension.
+            Ce que je cherche ? Une équipe qui construit des choses qui comptent.
         </p>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            fontSize: 11,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            color: 'var(--fg-dim)',
-          }}
-        >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              background: '#5dbd76',
-              animation: 'pulse 2s infinite',
-              display: 'inline-block',
-            }}
-          />
-          En recherche d'alternance
-        </div>
+
       </motion.div>
 
       <style>{`
@@ -406,8 +375,9 @@ function About() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="about-left"
         style={{
-          padding: '80px 48px',
+          padding: '40px 50px',
           borderRight: '1px solid var(--line)',
+            margin: 'auto'
         }}
       >
         <h2
@@ -423,11 +393,15 @@ function About() {
         >
           À propos<br />de moi
         </h2>
-        <p style={{ color: 'var(--fg-mid)', lineHeight: 1.9, maxWidth: 380 }}>
-          Développeuse Full Stack Data IA en Mastère à Sup De Vinci (bac+5), je combine développement web et data science. Formée au Wagon, à l'ENI et à NEXA, j'ai accumulé des expériences en alternance (ACCK, Nantes) et en stage (IPDeveloppement).
+        <p style={{ color: 'var(--fg-mid)', lineHeight: 1.9, maxWidth: 380, textAlign: 'justify' }}>
+            Développeuse full-stack et data en devenir, je prépare un Mastère Full Stack Data IA en alternance avec une conviction : la tech est plus puissante quand elle résout de vrais problèmes humains.
+            Mon projet du moment en est la preuve : une application intelligente de recommandation skincare, née d'une frustration que je partage avec des millions de gens, ne pas vraiment savoir ce qu'on met sur sa peau.
+            J'y combine analyse visuelle par IA, traitement de données produits et chatbot personnalisé pour aider chacun à comprendre sa peau et faire des choix éclairés.
+            Un projet à la croisée de ce que j'aime faire et de ce que je vis au quotidien.
+            Parce que oui, en dehors du code, je suis une vraie passionnée de skincare et makeup, j'analyse les compositions d'ingrédients comme d'autres lisent les menus. Je m'entraîne à la musculation pour me vider la tête, je pâtisse pour le plaisir de créer quelque chose de concret avec mes mains,
+            et j'ai même écrit une chanson.
+            Ce qui me motive dans mon alternance, c'est ça : apprendre vite, créer des choses utiles, et rejoindre une équipe où la curiosité est une qualité, pas un défaut
           <br /><br />
-          Je maîtrise aussi bien le backend (Ruby, Java, PHP, Python) que le frontend (React, JS, Symfony), et je m'épanouis sur des projets qui mêlent data, IA et application concrète.
-
         </p>
       </motion.div>
 
@@ -510,6 +484,7 @@ function Contact() {
           fontWeight: 300,
           letterSpacing: '-0.03em',
           lineHeight: 0.9,
+            fontStyle: 'italic'
         }}
       >
         Travaillons<br />
