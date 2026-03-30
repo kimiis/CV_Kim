@@ -35,7 +35,7 @@ const PROJECT_META = {
     featured: true,
   },
   CV_Kim: {
-    title: 'Portefolio',
+    title: 'Portfolio',
     description: "Portfolio personnel développé en React avec Vite et Framer Motion. Animations fluides, curseur custom, routing SPA et données chargées depuis l'API GitHub. Déployé en production sur Vercel.",
     tags: ['React', 'Vite', 'Framer Motion', 'Vercel'],
     color: '#b8a0e8',
@@ -50,9 +50,18 @@ const PROJECT_META = {
     year: '2026',
     featured: false,
   },
+  sncf: {
+    title: 'RailGo',
+    description: "Comparateur train SNCF vs voiture, visualise l'empreinte carbone de ton trajet pour voyager plus vert.",
+    tags: ['React', 'Python', 'Vercel','Fast API','Vite'],
+    color: '#4a90d9',
+    year: '2025',
+    featured: true,
+    liveUrl: 'https://sncf-five.vercel.app/',
+  },
 }
 
-const ORDER = ['barbienb', 'Onstage', 'Enchere', 'CleanSkin', 'CV_Kim','HackatonSupDeVinci']
+const ORDER = ['barbienb', 'Onstage', 'Enchere', 'CleanSkin', 'CV_Kim', 'HackatonSupDeVinci', 'sncf']
 
 export function useGitHubRepos(username = 'kimiis') {
   const [repos, setRepos] = useState([])
@@ -83,6 +92,7 @@ export function useGitHubRepos(username = 'kimiis') {
             forks: repo.forks_count || 0,
             language: repo.language || '',
             url: repo.html_url || `https://github.com/${username}/${name}`,
+            liveUrl: meta.liveUrl || null,
             updatedAt: repo.updated_at || null,
           }
         })
