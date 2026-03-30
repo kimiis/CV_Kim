@@ -269,6 +269,20 @@ export default function ProjectDetail() {
                 </a>
               ),
             },
+            ...(project.liveUrl ? [{
+              label: 'Live',
+              value: (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-cursor="pointer"
+                  style={{ color: project.color, display: 'flex', alignItems: 'center', gap: 4 }}
+                >
+                  Voir le site ↗
+                </a>
+              ),
+            }] : []),
           ].map(({ label, value }, i) => (
             <motion.div
               key={label}
